@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Float & Alignment</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .clr {
+      clear: both;
+    }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.4em;
+    }
+    .container {
+      max-width: 960px;
+      margin: 30px auto;
+    }
+
+    .box {
+      background: #f4f4f4;
+      border: 2px solid #000;
+      padding: 20px;
+      margin-bottom: 10px;
+
+    }
+
+    .box p {
+      /* Text Align */
+      text-align: justify;
+    }
+    #box-2 {
+      float: left;
+      width: 60%;
+    }
+    #box-3 {
+      float: right;
+      width: 35%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box" id="box-1">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A ipsa fuga repellendus fugiat inventore in! Fuga neque esse architecto in?</p>
+    </div>
+    
+    <div class="box" id="box-2">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe pariatur maxime iusto consequatur doloremque, provident distinctio cumque nobis hic deleniti!</p>
+    </div>
+    
+    <div class="box" id="box-3">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe pariatur maxime iusto consequatur doloremque, provident distinctio cumque nobis hic deleniti!</p>
+    </div>
+
+    <div class="clr"></div>
+    
+    <div class="box" id="box-4">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe pariatur maxime iusto consequatur doloremque, provident distinctio cumque nobis hic deleniti!</p>
+    </div>
+  </div>
+</body>
+</html>

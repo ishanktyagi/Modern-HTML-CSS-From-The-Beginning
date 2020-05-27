@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Em & Rem Units</title>
+  <style>
+    #box-1 {
+      font-size: 20px;
+    }
+    #box-1 p {
+      font-size: 1.5em;        /*    computed value = 1.5 * 20 = 30 px*/ 
+      padding:  1em;          /* \!/ computed value = 1 * 30 = 30 px --b/c it will look at its font-size first and then look for parent font-size    */
+
+    }
+
+    /* Problem in Nested elements */
+    #box-1 ul {
+      font-size: 1.2em;  /* Nested ul gets bigger  */ 
+    }
+    /* Using Em is not a good idea --- nested elements gets bigger */
+
+    /*Browser on changing font size changes the font-size of html element so its better to use rem than em*/
+
+    html {
+      font-size: 10px;
+    }
+    #box-2 h3 {
+      font-size: 2rem;
+    }
+    #box-2 p {
+      font-size: 1.6rem;  /*comp value = 1.6 * 16 (10 now)*/
+      line-height: 1.7rem; /*comp value = 1.7 * 16 (10 now)*/
+    }
+  </style>
+</head>
+<body>
+  <div id="box-1">
+    <h3>Box One</h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ipsa autem consequuntur, suscipit dolores iusto dolorem quis excepturi nam. Aperiam minima praesentium labore consequuntur maiores eaque vel laborum eveniet excepturi?
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3
+          <ul>
+            <li>1</li>
+            <li>2
+              <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+              </ul>
+            </li>
+            <li>3</li>
+          </ul>
+        </li>
+        <li>4</li>
+      </ul>
+    </p>
+  </div>
+  <div id="box-2">
+    <h3>Box Two</h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ipsa autem consequuntur, suscipit dolores iusto dolorem quis excepturi nam. Aperiam minima praesentium labore consequuntur maiores eaque vel laborum eveniet excepturi?
+    </p>
+  </div>
+</body>
+</html>
